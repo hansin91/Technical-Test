@@ -1,0 +1,21 @@
+<table class="table table-bordered">
+  <thead>
+    <th>Date</th>
+    <th>Max</th>
+    <th>Min</th>
+    <th>Difference</th>
+    <th></th>
+  </thead>
+  <tbody>
+    <tr id="{{ i}}" *ngFor="let weight of weights; let i = index;">
+      <td>{{ weight.date | date: 'yyyy-MM-dd' }}</td>
+      <td>{{ weight.maxWeight}}</td>
+      <td>{{ weight.minWeight}}</td>
+      <td>{{ weight.maxWeight - weight.minWeight}}</td>
+      <td>
+        <a routerLink="/weight/{{ i }}" class="btn btn-info">View Detail</a>
+        <a routerLink="/weight/edit/{{ i }}" class="btn btn-success">Edit</a>
+      </td>
+    </tr>
+  </tbody>
+</table>
