@@ -16,7 +16,6 @@ import { MatButtonModule } from '@angular/material/button';
 import { StorageServiceModule } from 'angular-webstorage-service';
 import { HomeComponent } from './pages/home/home.component';
 import { WeightDetailComponent } from './pages/weight-detail/weight-detail.component';
-import { FormComponent } from './components/form/form.component';
 import { EditComponent } from './pages/edit/edit.component';
 import { ReactiveFormsModule } from '@angular/forms';
 
@@ -27,7 +26,6 @@ import { ReactiveFormsModule } from '@angular/forms';
 		NewWeightComponent,
 		HomeComponent,
 		WeightDetailComponent,
-		FormComponent,
 		EditComponent
 	],
 	imports: [
