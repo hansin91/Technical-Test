@@ -1,18 +1,25 @@
-<table class="table table-bordered">
-  <tr>
-    <td>Date</td>
-    <td>{{ weight.date | date: 'yyyy-MM-dd'  }}</td>
-  </tr>
-  <tr>
-    <td>Max</td>
-    <td>{{ weight.maxWeight}}</td>
-  </tr>
-  <tr>
-    <td>Min</td>
-    <td>{{ weight.minWeight}}</td>
-  </tr>
-  <tr>
-    <td>Difference</td>
-    <td>{{ weight.maxWeight - weight.minWeight }}</td>
-  </tr>
-</table>
+<div class="detail__content">
+  <table class="table table-bordered">
+    <tr>
+      <td>Date</td>
+      <td>{{ weight.date | date: 'yyyy-MM-dd'  }}</td>
+    </tr>
+    <tr>
+      <td>Max</td>
+      <td>{{ weight.maxWeight}}</td>
+    </tr>
+    <tr>
+      <td>Min</td>
+      <td>{{ weight.minWeight}}</td>
+    </tr>
+    <tr>
+      <td>Difference</td>
+      <td>{{ weight.maxWeight - weight.minWeight }}</td>
+    </tr>
+  </table>
+
+  <div class="button__back">
+    <a class="btn btn-danger" routerLink="/">Back to list</a>
+  </div>
+</div>
+
