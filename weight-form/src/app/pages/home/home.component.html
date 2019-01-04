@@ -18,6 +18,13 @@
           <a routerLink="/weight/edit/{{ i }}" class="btn btn-success">Edit</a>
         </td>
       </tr>
+      <tr *ngIf="weights">
+        <td>Average</td>
+        <td>{{ averageMaxWeight | number :'1.1-1'}}</td>
+        <td>{{ averageMinWeight | number :'1.1-1'}}</td>
+        <td>{{ averageDifference | number :'1.1-1'}}</td>
+        <td></td>
+      </tr>
     </tbody>
   </table>
 

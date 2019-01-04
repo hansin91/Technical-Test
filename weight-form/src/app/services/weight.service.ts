@@ -16,9 +16,10 @@ export class WeightService {
 
 	public save(data: any): void {
 		const weight = new Weight();
-		weight.date = new Date(data.date);
-		weight.maxWeight = data.maxWeight;
-		weight.minWeight = data.minWeight;
+		data.maxWeight = +data.maxWeight;
+		data.minWeight = +data.minWeight;
+		Object.assign(weight, data);
+		weight.difference = data.maxWeight - data.minWeight;
 		this.weight_list.push(weight);
 		const sortedArray = this.weight_list.sort((a, b) => {
 			return new Date(b.date).getTime() - new Date(a.date).getTime();
