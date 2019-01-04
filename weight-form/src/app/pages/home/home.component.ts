@@ -10,7 +10,7 @@ import { Weight } from 'src/app/models/weight';
 export class HomeComponent implements OnInit {
 	public weights: Weight[];
 	constructor(private weightService: WeightService) {
-		this.weights = weightService.getList();
+		this.weights = this.weightService.getList();
 	}
 
 	ngOnInit() {}
